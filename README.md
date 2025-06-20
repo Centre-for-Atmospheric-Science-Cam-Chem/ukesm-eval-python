@@ -5,4 +5,3 @@
 Previous description:
 Alex's R scripts for evaluating UKESM1 data against observation. It was used to analyse data for the publication Archibald et al. (2020) "Description and evaluation of the UKCA stratosphere–troposphere chemistry scheme (StratTrop vn 1.0) implemented in UKESM1"
 
-N.B.: Extensive commenting - whilst not necessarily the most esteemed-upon coding practice, is for me to remember what the hell is going on. 
