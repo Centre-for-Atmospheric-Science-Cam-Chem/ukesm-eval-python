@@ -1,4 +1,5 @@
-# Skip big, changeable data for separation of code from data storage and versioning
+# Skip big, changeable data for separation of code from data storage and versioning.
+
 data/
 *.nc
 *.csv
