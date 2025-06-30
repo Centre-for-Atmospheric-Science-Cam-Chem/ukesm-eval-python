@@ -1,0 +1,7 @@
+# Skip big, changeable data for separation of code from data storage and versioning
+data/
+*.nc
+*.csv
+*.stat
+*.h5
+*.zip
