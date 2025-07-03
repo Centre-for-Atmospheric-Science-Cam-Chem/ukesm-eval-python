@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
 
+# Dummy inputs
 ds1 = xr.open_dataset(r"C:\Users\Aliya-LOCAL\Code\ukca_evaluation\data\co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc")
 ds2 = xr.open_dataset(r"C:\Users\Aliya-LOCAL\Code\ukca_evaluation\data\co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc")
 
