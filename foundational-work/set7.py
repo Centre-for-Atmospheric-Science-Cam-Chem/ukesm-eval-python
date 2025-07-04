@@ -10,7 +10,7 @@ ds2 = xr.open_dataset(r"C:\Users\Aliya-LOCAL\Code\ukca_evaluation\data\co_AERmon
 
 stations = pd.read_csv("config/gaw_noaa_stations.csv")
 
-# Filter stations to your model’s lat/lon bounds
+# Filter stations to model’s lat/lon bounds
 
 lat_min, lat_max = float(ds1.lat.min()), float(ds1.lat.max())
 lon_min, lon_max = float(ds1.lon.min()), float(ds1.lon.max())
