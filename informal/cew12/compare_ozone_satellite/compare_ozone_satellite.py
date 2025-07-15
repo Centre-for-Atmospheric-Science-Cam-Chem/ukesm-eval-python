@@ -42,8 +42,16 @@ latest_model_time = latest_model_bounds[1]
 model_time_constraint = iris.Constraint(time=lambda cell: earliest_model_time <= cell.point < latest_model_time)
 observation_total_O3_dataset = iris.load(bodeker_total_O3_wildpath, model_time_constraint)
 
-# TODO end up with series of 10 cubes uncertainty (could be good for error bars)
-# then 10 for data, so need to coalesce
+# End up with series of n cubes uncertainty (could be good for error bars)
+# then n for data, so need to coalesce. This is a bit of a nasty hack because
+# I'm using prior knowledge of that layout and depending on it
+num_ozone_cubes = int(len(observation_total_O3_dataset) / 2)
+# Iris seems unnecessarily strict but won't merge/concat cubes with different
+# 'created' timestamp strings, so getting rid of those:
+for cube in observation_total_O3_dataset:
+    del cube.attributes["created"]
+observation_total_O3_cube = observation_total_O3_dataset[num_ozone_cubes : ].concatenate_cube()
+observation_sigma_cube    = observation_total_O3_dataset[ : num_ozone_cubes].concatenate_cube()
 
 pass
 
