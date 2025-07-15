@@ -62,26 +62,36 @@ def main():
     observation_total_O3_cube = observation_total_O3_dataset[num_ozone_cubes : ].concatenate_cube()
     observation_sigma_cube    = observation_total_O3_dataset[ : num_ozone_cubes].concatenate_cube()
 
-    # Compare global means over the time we have
-    # Observations first
-    observation_total_by_time = global_average_over_time(observation_total_O3_cube)
-    iris.quickplot.plot(observation_total_by_time, label="Bodeker observation")
+    latitude_ranges = [(-90,  90),
+                       (-90, -60),
+                       (-60,   0),
+                       (  0,  60),
+                       ( 60,  90)]
 
-    # Error bars...
-    # Iris coord points for time give tuples, el[0]=value, el[1]=bounds...
-    iris_time_points = observation_total_by_time.coord("time").cells()
-    standard_time_points = [datetime.datetime(point[0].year, point[0].month, point[0].day) for point in iris_time_points]
-    sigma_average_over_time = global_average_over_time(observation_sigma_cube)
-    plt.errorbar(standard_time_points, observation_total_by_time.data, yerr=sigma_average_over_time.data)
+    y_range=(200,475)
+    for lat_min, lat_max in latitude_ranges:
+        # Compare global means over the time we have
+        # Observations first
+        observation_total_by_time = global_average_over_time(observation_total_O3_cube, lat_min, lat_max)
+        iris.quickplot.plot(observation_total_by_time, label="Bodeker observation", color="blue")
 
-    for model, model_cube in model_total_O3_cube.items():
-        model_total_by_time = global_average_over_time(model_cube)
-        iris.quickplot.plot(model_total_by_time, label=model)
-    plt.title("Model vs BodekerScientific_Total_Column_Ozone, global mean")
-    plt.legend()
-    # Save before plot or get blank
-    plt.savefig("model_vs_bodeker_total_ozone_global_mean.png")
-    plt.show()
+        # Error bars...
+        # Iris coord points for time give tuples, el[0]=value, el[1]=bounds...
+        iris_time_points = observation_total_by_time.coord("time").cells()
+        standard_time_points = [datetime.datetime(point[0].year, point[0].month, point[0].day) for point in iris_time_points]
+        sigma_average_over_time = global_average_over_time(observation_sigma_cube, lat_min, lat_max)
+        plt.errorbar(standard_time_points, observation_total_by_time.data, yerr=sigma_average_over_time.data)
+
+        for model, model_cube in model_total_O3_cube.items():
+            model_total_by_time = global_average_over_time(model_cube, lat_min, lat_max)
+            iris.quickplot.plot(model_total_by_time, label=model,
+                                color="red" if model == "UKESM-1.1" else "green")
+        plt.title(f"Model vs BodekerScientific_Total_Column_Ozone, latitude: [{lat_min}, {lat_max}] deg")
+        plt.legend()
+        plt.ylim(y_range)
+        # Save before plot or get blank
+        plt.savefig(f"model_vs_bodeker_total_ozone_lat_{lat_min}_{lat_max}.png")
+        plt.show()
 
     pass
 
@@ -95,7 +105,10 @@ def load_model_O3_cube(subpath):
     return model_total_O3_cube
 
 
-def global_average_over_time(cube):
+def global_average_over_time(whole_cube, lat_min, lat_max):
+
+    model_lat_constraint = iris.Constraint(latitude=lambda cell: lat_min <= cell.point <= lat_max)
+    cube = whole_cube.extract(model_lat_constraint)
 
     # Weighting by cell areas so that small polar cells don't have undue
     # influence on average
