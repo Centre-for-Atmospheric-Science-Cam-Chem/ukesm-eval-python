@@ -10,38 +10,45 @@ Charlie Wartnaby cew12@cam.ac.uk
 
 """
 
+import datetime
 import iris
 import iris.quickplot
 import matplotlib.pyplot as plt
 import os
 
 
-model_output_path = "/gws/nopw/j04/ukca_vol2/2025-07-ukesm-eval/model_output/u-dr226/2005_2014_O3"
-path_model_total_O3_DU = os.path.join(model_output_path, "u-dr226_O3_total_DU.nc")
-path_model_tropo_O3_DU = os.path.join(model_output_path, "u-dr226_O3_tropo_DU.nc")
+model_output_root = "/gws/nopw/j04/ukca_vol2/2025-07-ukesm-eval/model_output"
+path_model_total_O3_DU = os.path.join(model_output_root, "u-dr226_O3_total_DU.nc")
+models_total_O3_DU = {"UKESM-1.1": "u-dr061/2005_2014_O3/u-dr061_O3_total_DU.nc",
+                      "UKESM-1.3": "u-dr226/2005_2014_O3/u-dr226_O3_total_DU.nc" }
 
 bodeker_total_O3_folder = "/gws/nopw/j04/ukca_vol2/Observational_datasets/Other/BodekerScientific_Total_Column_Ozone"
 bodeker_total_O3_wildcard = "BSFilledTCO_V3.4.1_*_Monthly.nc"
 bodeker_total_O3_wildpath = os.path.join(bodeker_total_O3_folder, bodeker_total_O3_wildcard)
 
 def main():
-    print(f"Attempting to open {path_model_total_O3_DU}")
-    model_total_O3_dataset = iris.load(path_model_total_O3_DU)
-    if len(model_total_O3_dataset) != 1:
-        raise ValueError(f"Expected exactly one cube in {path_model_total_O3_DU}")
-    model_total_O3_cube = model_total_O3_dataset[0]
+    model_total_O3_cube = {}
+    earliest_overall_time = None
+    latest_overall_time   = None
+    for model, subpath in models_total_O3_DU.items():
+        model_cube = load_model_O3_cube(subpath)
+        model_total_O3_cube[model] = model_cube
 
-    # Find limits/bounds of model time [inclusive_limit, exclusive_limit)
-    earliest_model_time_cell = model_total_O3_cube.coord("time").cell(0)
-    earliest_model_bounds = earliest_model_time_cell[1] # Seem to get mid value in el 0, bounds here
-    earliest_model_time = earliest_model_bounds[0] # tuple of (lower, upper) bounds
-    latest_model_time_cell = model_total_O3_cube.coord("time").cell(-1)
-    latest_model_bounds = latest_model_time_cell[1]
-    latest_model_time = latest_model_bounds[1]
+        # Get time bounds for model cubes loaded so far    
+        earliest_model_time_cell = model_cube.coord("time").cell(0)
+        earliest_model_bounds = earliest_model_time_cell[1] # Seem to get mid value in el 0, bounds here
+        earliest_model_time = earliest_model_bounds[0] # tuple of (lower, upper) bounds
+        latest_model_time_cell = model_cube.coord("time").cell(-1)
+        latest_model_bounds = latest_model_time_cell[1]
+        latest_model_time = latest_model_bounds[1]
+        if not earliest_overall_time or earliest_model_time < earliest_overall_time:
+            earliest_overall_time = earliest_model_time
+        if not latest_overall_time or latest_model_time > latest_overall_time:
+            latest_overall_time = latest_model_time
 
     # Only load observation data that falls within model time bounds
     # (we know observation data is wider in time)
-    model_time_constraint = iris.Constraint(time=lambda cell: earliest_model_time <= cell.point < latest_model_time)
+    model_time_constraint = iris.Constraint(time=lambda cell: earliest_overall_time <= cell.point < latest_overall_time)
     observation_total_O3_dataset = iris.load(bodeker_total_O3_wildpath, model_time_constraint)
 
     # End up with series of n cubes uncertainty (could be good for error bars)
@@ -56,15 +63,36 @@ def main():
     observation_sigma_cube    = observation_total_O3_dataset[ : num_ozone_cubes].concatenate_cube()
 
     # Compare global means over the time we have
-    model_total_by_time = global_average_over_time(model_total_O3_cube)
+    # Observations first
     observation_total_by_time = global_average_over_time(observation_total_O3_cube)
-    iris.quickplot.plot(model_total_by_time, label="model")
-    iris.quickplot.plot(observation_total_by_time, label="observation")
+    iris.quickplot.plot(observation_total_by_time, label="Bodeker observation")
+
+    # Error bars...
+    # Iris coord points for time give tuples, el[0]=value, el[1]=bounds...
+    iris_time_points = observation_total_by_time.coord("time").cells()
+    standard_time_points = [datetime.datetime(point[0].year, point[0].month, point[0].day) for point in iris_time_points]
+    sigma_average_over_time = global_average_over_time(observation_sigma_cube)
+    plt.errorbar(standard_time_points, observation_total_by_time.data, yerr=sigma_average_over_time.data)
+
+    for model, model_cube in model_total_O3_cube.items():
+        model_total_by_time = global_average_over_time(model_cube)
+        iris.quickplot.plot(model_total_by_time, label=model)
     plt.title("Model vs BodekerScientific_Total_Column_Ozone, global mean")
     plt.legend()
+    # Save before plot or get blank
+    plt.savefig("model_vs_bodeker_total_ozone_global_mean.png")
     plt.show()
 
     pass
+
+def load_model_O3_cube(subpath):
+    path = os.path.join(model_output_root, subpath)
+    print(f"Attempting to open {path}")
+    model_total_O3_dataset = iris.load(path)
+    if len(model_total_O3_dataset) != 1:
+        raise ValueError(f"Expected exactly one cube in {path}")
+    model_total_O3_cube = model_total_O3_dataset[0]
+    return model_total_O3_cube
 
 
 def global_average_over_time(cube):
