@@ -52,14 +52,19 @@ def main(args):
     cell_areas_m2 = iris.analysis.cartography.area_weights(O3_mass_cube_kg_column)
     O3_mass_cube_kg_m2 = O3_mass_cube_kg_column / cell_areas_m2
 
-    # Convert from mass to a volume at standard temperature and pressure
+    # Convert from mass to a volume at standard temperature and pressure.
+    # Now on the one hand https://en.wikipedia.org/wiki/Dobson_unit links to:
     # https://en.wikipedia.org/wiki/Standard_temperature_and_pressure
     # "Since 1982, STP has been defined as a temperature of 273.15 K 
     #  (0 °C, 32 °F) and an absolute pressure of exactly 1 bar (100 kPa, 10^5 Pa)."
+    # However, further down the page, and in other places including this NERC
+    # definition, 1 atm == 101.325 kPa is used:
+    # https://vocab.nerc.ac.uk/collection/P07/current/CFSN0619/
+    # ""stp" means standard temperature (0 degC) and pressure (101325 Pa)"
     standard_T_K = 273.15
-    standard_p_Pa = 1e5
+    standard_p_Pa = 101325.0
     molar_gas_const_J_K_mol = 8.314
-    molar_mass_O3_g_mol = 3 * 16.0 # Approx from molecular formula
+    molar_mass_O3_g_mol = 47.997 # From https://en.wikipedia.org/wiki/Ozone
     molar_mass_O3_kg_mol = molar_mass_O3_g_mol * 1e-3
 
     # pV = nRT           where n = num mols
