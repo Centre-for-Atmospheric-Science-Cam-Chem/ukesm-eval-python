@@ -64,6 +64,7 @@ def main():
 
     latitude_ranges = [(-90,  90),
                        (-90, -60),
+                       (-60,  60),
                        (-60,   0),
                        (  0,  60),
                        ( 60,  90)]
@@ -85,10 +86,13 @@ def main():
         for model, model_cube in model_total_O3_cube.items():
             model_total_by_time = global_average_over_time(model_cube, lat_min, lat_max)
             iris.quickplot.plot(model_total_by_time, label=model,
-                                color="red" if model == "UKESM-1.1" else "green")
+                                color="darkblue" if model == "UKESM-1.1" else "green")
         plt.title(f"Model vs BodekerScientific_Total_Column_Ozone, latitude: [{lat_min}, {lat_max}] deg")
         plt.legend()
-        plt.ylim(y_range)
+
+        # Optionally set so all have same y-range:
+        #plt.ylim(y_range)
+        
         # Save before plot or get blank
         plt.savefig(f"model_vs_bodeker_total_ozone_lat_{lat_min}_{lat_max}.png")
         plt.show()
