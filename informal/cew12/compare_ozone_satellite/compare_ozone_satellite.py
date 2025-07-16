@@ -64,9 +64,9 @@ def main():
 
     latitude_ranges = [(-90,  90),
                        (-90, -60),
-                       (-60,  60),
-                       (-60,   0),
-                       (  0,  60),
+                       (-60, -30),
+                       (-30,  30),
+                       ( 30,  60),
                        ( 60,  90)]
 
     y_range=(200,475)
@@ -92,7 +92,7 @@ def main():
 
         # Optionally set so all have same y-range:
         #plt.ylim(y_range)
-        
+
         # Save before plot or get blank
         plt.savefig(f"model_vs_bodeker_total_ozone_lat_{lat_min}_{lat_max}.png")
         plt.show()
