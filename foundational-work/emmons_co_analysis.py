@@ -5,9 +5,6 @@ import xarray as xr
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-# ========================
-# 1. CONFIGURATION (Previously in YAML)
-# ========================
 PATHS = {
     "model": "./data/xgywn_co.nc",  # Path to model NetCDF
     "obs": "./data/obs/INTEX-NA_CT_co.stat",  # Obs data for one site
@@ -16,15 +13,12 @@ PATHS = {
 
 SITE = {
     "name": "INTEX-NA CT",
-    "lon_range": [-85, -80],  # Approximate for CT site
+    "lon_range": [-85, -80],  
     "lat_range": [30, 40],
     "alt_levels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],  # km
-    "month": 7  # July (from R's mon=7)
+    "month": 7  
 }
 
-# ========================
-# 2. DATA LOADING (Identical to R)
-# ========================
 def load_obs(obs_path):
     """Load observed CO data exactly like R's read.table()."""
     return pd.read_csv(
@@ -32,7 +26,7 @@ def load_obs(obs_path):
         delim_whitespace=True,
         comment="#",
         header=None,
-        usecols=[0, 4, 5],  # ialt (V1), mean (V5), stddev (V6)
+        usecols=[0, 4, 5], 
         names=["alt", "mean", "stddev"]
     )
 
@@ -41,18 +35,14 @@ def load_model(nc_path, lon, lat, month):
     ds = xr.open_dataset(nc_path)
     return ds["CO"].sel(
         lon=lon, lat=lat, method="nearest"
-    ).isel(time=month - 1) * (1e9 / 28.01)  # ppbv conversion
+    ).isel(time=month - 1) * (1e9 / 28.01) 
 
-# ========================
 # 3. PROCESSING (Quantiles like R's apply())
-# ========================
 def calculate_quantiles(model_data):
     """Identical to R's quantile calculation."""
     return np.quantile(model_data, [0.25, 0.5, 0.75], axis=0)
 
-# ========================
 # 4. PLOTTING (Replicate R's PDF Output)
-# ========================
 def plot_comparison(model_q, obs_data, site_info):
     """Match R's plot aesthetics exactly."""
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -83,23 +73,21 @@ def plot_comparison(model_q, obs_data, site_info):
     ax.legend()
     return fig
 
-# ========================
+
 # 5. MAIN EXECUTION (Like R Script)
-# ========================
+
 if __name__ == "__main__":
-    # Load data
+    
     obs = load_obs(PATHS["obs"])
     model = load_model(
         PATHS["model"],
-        lon=np.mean(SITE["lon_range"]),  # Approximate center
+        lon=np.mean(SITE["lon_range"]),  
         lat=np.mean(SITE["lat_range"]),
         month=SITE["month"]
     )
     
-    # Process
     quantiles = calculate_quantiles(model)
     
-    # Plot
     fig = plot_comparison(quantiles, obs, SITE)
     Path(PATHS["output"]).parent.mkdir(exist_ok=True)
     fig.savefig(PATHS["output"], bbox_inches="tight")
