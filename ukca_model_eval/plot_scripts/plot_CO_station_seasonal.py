@@ -12,8 +12,8 @@ with open("config.yaml") as f:
     config = yaml.safe_load(f)
 
 
-ds1 = load_model_data(config['model_file_early'])
-ds2 = load_model_data(config['model_file_late'])
+ds1 = load_model_data(config['model_file'])
+ds2 = load_model_data(config['model_file'])
 stations = load_station_csv(config['stations_csv'])
 var_name = config['var_name']
 level = config['level']
