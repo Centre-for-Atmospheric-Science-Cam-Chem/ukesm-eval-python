@@ -9,8 +9,7 @@ The code is designed for easy extension to new variables, different stations, an
 ### **Project Structure**
 
 ```
-plaintext
-Copy code
+
 ukca_model_eval/
 ├── utils/
 │   ├── __init__.py
@@ -39,7 +38,7 @@ ukca_model_eval/
         
         ```bash
         bash
-        Copy code
+         
         python plot_scripts/plot_CO_station_seasonal.py
         ```
         
