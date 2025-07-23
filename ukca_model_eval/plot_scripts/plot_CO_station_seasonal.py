@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from utils.units import convert
 
 
-# --- Load config ---
+# Load config
 with open("config.yaml") as f:
     config = yaml.safe_load(f)
 
