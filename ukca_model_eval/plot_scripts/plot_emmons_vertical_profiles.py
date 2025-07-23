@@ -1,5 +1,3 @@
-# plot_scripts/plot_emmons_vertical_profiles.py
-
 import matplotlib.pyplot as plt
 import numpy as np
 from utils.data_io import read_emmons_stat_file, match_stat_files_by_basename
