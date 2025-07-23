@@ -1,9 +1,9 @@
 def mol_per_mol_to_ppbv(x):
-    """Convert from mol/mol to ppbv."""
+    #Convert from mol/mol to ppbv.
     return x * 1e9
 
 def ppbv_to_mol_per_mol(x):
-    """Convert from ppbv to mol/mol."""
+    #Convert from ppbv to mol/mol.
     return x / 1e9
 
 # Add more as needed
