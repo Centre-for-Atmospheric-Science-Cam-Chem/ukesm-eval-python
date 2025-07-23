@@ -1,5 +1,5 @@
-model_file_early: data/co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc
-model_file_late: data/co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc
+model_file: data/co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-189912.nc
+obs_file: data/co_AERmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-199912.nc
 stations_csv: data/gaw_noaa_stations.csv
 output_pdf: output/co_comparison_plots.pdf
 var_name: co
