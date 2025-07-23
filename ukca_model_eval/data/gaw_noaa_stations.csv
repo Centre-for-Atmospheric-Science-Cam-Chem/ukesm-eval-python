@@ -1,0 +1,217 @@
+Site Name,Station Code,Latitude,Longitude,Altitude_m,Network
+"Airborne Aerosol Observatory, Bondville, Illinois",AAO*,40.05,-88.37,230.0,NOAA-GML
+"Arembepe, Bahia",ABP*,-12.77,-38.17,1.0,NOAA-GML
+"Albuquerque, New Mexico",ABQ,35.038,-106.622,1617.0,NOAA-GML
+Alaska Coast Guard,ACG,57.737,-152.504,6.0,NOAA-GML
+"Alert, Nunavut",ALT,82.451,-62.507,185.0,NOAA-GML
+Amsterdam Island,AMS*,-37.798,77.538,55.0,NOAA-GML
+"Argyle, Maine",AMT,45.035,-68.682,52.4,NOAA-GML
+Anmyeon-do,AMY,36.539,126.329,47.0,NOAA-GML
+Appalachian State,APP,36.2,-81.7,1100.0,NOAA-GML
+"Arrival Heights, Antarctica",ARH,-77.833,166.2,184.0,NOAA-GML
+El Arenosillo,ARN,37.1,-6.733,41.0,NOAA-GML
+Ascension Island,ASC,-7.967,-14.4,85.0,NOAA-GML
+Assekrem,ASK,23.262,5.632,2710.0,NOAA-GML
+"St. Croix, Virgin Islands",AVI*,17.75,-64.75,3.0,NOAA-GML
+"Terceira Island, Azores",AZR,38.766,-27.375,19.0,NOAA-GML
+Baltic Sea,BAL*,55.35,17.22,3.0,NOAA-GML
+"Boulder Atmospheric Observatory, Colorado",BAO*,40.05,-105.004,1578.7,NOAA-GML
+Beo-Moussala,BEO,42.179,23.586,2925.0,NOAA-GML
+"Prospect Hill, Bermuda",BER,32.301,-64.766,60.0,NOAA-GML
+"Bradgate, Iowa",BGI*,42.82,-94.41,355.1,NOAA-GML
+Baring Head Station,BHD,-41.408,174.871,85.0,NOAA-GML
+"Bismarck, North Dakota",BIS,46.772,-100.76,511.0,NOAA-GML
+Bukit Kototabang,BKT,-0.202,100.318,845.0,NOAA-GML
+"Boulder, Colorado",BLD,39.991,-105.261,1628.0,NOAA-GML
+"St. Davids Head, Bermuda",BME*,32.368,-64.648,12.0,NOAA-GML
+"Tudor Hill, Bermuda",BMW,32.265,-64.879,30.0,NOAA-GML
+"Nashville, Tennessee",BNA,36.247,-86.562,182.0,NOAA-GML
+"Bondville, Illinois",BND,40.052,-88.373,230.0,NOAA-GML
+"Beaver Crossing, Nebraska",BNE*,40.8,-97.18,465.9,NOAA-GML
+Table Mountain,BOS,40.125,-105.237,1689.0,NOAA-GML
+Barrow Atmospheric Baseline Observatory,BRW,71.323,-156.611,11.0,NOAA-GML
+"Black Sea, Constanta",BSC*,44.178,28.665,0.0,NOAA-GML
+"Brentwood, Maryland",BWD,38.934,-76.956,16.8,NOAA-GML
+Colorado Atmospheric Observatory,CAO,39.923,-103.972,1508.2,NOAA-GML
+"Briggsdale, Colorado",CAR,40.635,-104.327,1488.0,NOAA-GML
+"Cold Bay, Alaska",CBA,55.21,-162.72,21.3,NOAA-GML
+"Caribou, Maine",CBM,46.868,-68.013,191.0,NOAA-GML
+"Cape Grim, Tasmania",CGO,-40.683,144.69,94.0,NOAA-GML
+Christmas Island,CHR,1.7,-157.152,0.0,NOAA-GML
+Cherskii,CHS*,68.513,161.531,30.0,NOAA-GML
+Centro de Investigacion de la Baja Atmosfera (CIBA),CIB,41.81,-4.93,845.0,NOAA-GML
+"Offshore Cape May, New Jersey",CMA,38.83,-74.32,0.0,NOAA-GML
+"Cape Meares, Oregon",CMO*,45.478,-123.969,30.0,NOAA-GML
+Cosmos,COS*,-12.12,-75.33,4600.0,NOAA-GML
+Cape San Juan,CPR,18.381,-65.618,66.0,NOAA-GML
+Cape Point,CPT,-34.352,18.489,230.0,NOAA-GML
+Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),CRV,64.986,-147.598,611.4,NOAA-GML
+Crozet Island,CRZ,-46.434,51.848,197.0,NOAA-GML
+"Dahlen, North Dakota",DND*,47.5,-99.24,472.4,NOAA-GML
+"Desert Rock, Nevada",DRA,36.624,-116.019,1007.0,NOAA-GML
+Drake Passage,DRP,-59.0,-64.69,0.0,NOAA-GML
+Dongsha Island,DSI,20.699,116.73,3.0,NOAA-GML
+"Egbert, Ontario",EGB,44.231,-79.784,251.0,NOAA-GML
+Easter Island,EIC,-27.16,-109.428,47.0,NOAA-GML
+"Estevan Point, British Columbia",ESP,49.383,-126.544,7.0,NOAA-GML
+"East Trout Lake, Saskatchewan",ETL,54.354,-104.987,493.0,NOAA-GML
+"Eureka, Nunavut",EUK,79.983,-85.95,0.0,NOAA-GML
+"Fairbanks, Alaska",FBK,64.86,-147.85,133.0,NOAA-GML
+Falkland Islands,FLK*,-51.7,-57.87,51.0,NOAA-GML
+"Fort Peck, Montana",FPK,48.308,-105.102,634.0,NOAA-GML
+Fortaleza,FTL*,-3.52,-38.28,3.0,NOAA-GML
+"Fairchild, Wisconsin",FWI*,44.66,-90.96,334.3,NOAA-GML
+Mariana Islands,GMI,13.386,144.656,0.0,NOAA-GML
+"Dwejra Point, Gozo",GOZ*,36.048,14.889,1.0,NOAA-GML
+"Gosan, Cheju Island",GSN,33.28,126.15,72.0,NOAA-GML
+"Goodwin Creek, Mississippi",GWN,34.255,-89.873,98.0,NOAA-GML
+"Molokai Island, Hawaii",HAA*,21.23,-158.95,3.0,NOAA-GML
+"Halley Station, Antarctica",HBA,-75.55,-25.63,30.0,NOAA-GML
+"Harvard Forest, Massachusetts",HFM,42.538,-72.171,340.0,NOAA-GML
+"Hilo, Hawaii",HIH,19.717,-155.049,11.0,NOAA-GML
+"Homer, Illinois",HIL,40.07,-87.91,201.5,NOAA-GML
+"Hanford, California",HNX,36.314,-119.632,73.0,NOAA-GML
+Hohenpeissenberg,HPB,47.801,11.024,985.0,NOAA-GML
+"Houston, Texas",HST,29.72,-95.4,19.0,NOAA-GML
+Humboldt State University,HSU*,41.059,-124.75,0.0,NOAA-GML
+Huancayo,HUA*,-12.05,-75.32,0.0,NOAA-GML
+Hegyhatsal,HUN,46.956,16.652,248.0,NOAA-GML
+"Huntsville, Alabama",HVA*,34.72,-86.64,0.0,NOAA-GML
+"Storhofdi, Vestmannaeyjar",ICE,63.4,-20.288,118.0,NOAA-GML
+INFLUX (Indianapolis Flux Experiment),INX,39.581,-86.421,,NOAA-GML
+"Grifton, North Carolina",ITN*,35.365,-77.393,8.0,NOAA-GML
+"Izana, Tenerife, Canary Islands",IZO,28.309,-16.499,2372.9,NOAA-GML
+Kaashidhoo,KCO*,4.97,73.47,1.0,NOAA-GML
+"Key Biscayne, Florida",KEY,25.665,-80.158,1.0,NOAA-GML
+"Kitt Peak, Arizona",KPA*,32.0,-112.0,2083.0,NOAA-GML
+"K-puszta, Kecskemét",KPS,46.967,19.583,0.0,NOAA-GML
+"Cape Kumukahi, Hawaii",KUM,19.561,-154.888,8.0,NOAA-GML
+Kwajalein,KWJ,8.715,167.723,10.0,NOAA-GML
+Sary Taukum,KZD*,44.084,76.871,595.0,NOAA-GML
+Plateau Assy,KZM*,43.25,77.88,2519.0,NOAA-GML
+LA Megacities,LAC*,34.0,-118.2,100.0,NOAA-GML
+Lauder,LAU,-45.04,169.68,370.0,NOAA-GML
+"Park Falls, Wisconsin",LEF,45.945,-90.273,472.0,NOAA-GML
+"Lewisburg, Pennsylvania",LEW,40.945,-76.879,166.0,NOAA-GML
+"Lac La Biche, Alberta",LLB*,54.954,-112.467,540.0,NOAA-GML
+Lulin,LLN,23.47,120.87,2862.0,NOAA-GML
+Lampedusa,LMP,35.518,12.632,45.0,NOAA-GML
+"Mould Bay, Northwest Territories",MBC*,76.247,-119.353,30.0,NOAA-GML
+Mt. Bachelor Observatory,MBO,43.977,-121.686,2731.0,NOAA-GML
+"McMurdo Station, Antarctica",MCM,-77.83,166.6,11.0,NOAA-GML
+High Altitude Global Climate Observation Center,MEX,18.984,-97.311,4464.0,NOAA-GML
+"Marshall Field Site, Boulder, Colorado",MFS,39.949,-105.197,1743.0,NOAA-GML
+"Mace Head, County Galway",MHD,53.326,-9.899,5.0,NOAA-GML
+"Sand Island, Midway",MID,28.219,-177.368,4.6,NOAA-GML
+Mt. Kenya,MKN*,-0.062,37.297,3644.0,NOAA-GML
+"Mauna Kea, Hawaii",MKO*,19.823,-155.469,4199.0,NOAA-GML
+"Mauna Loa, Hawaii",MLF*,19.53,-155.58,3397.0,NOAA-GML
+"Mauna Loa, Hawaii",MLO,19.536,-155.576,3397.0,NOAA-GML
+Marcapomacocha,MPO,-11.4,-76.32,4500.0,NOAA-GML
+Marcellus Pennsylvania,MRC,41.466,-76.419,592.0,NOAA-GML
+Montsec,MSA,42.05,0.73,1571.0,NOAA-GML
+"Mashpee, Massachusetts",MSH,41.657,-70.498,32.0,NOAA-GML
+"Madison, Wisconsin",MSN,43.13,-89.33,271.0,NOAA-GML
+Montseny,MSY,41.78,2.36,700.0,NOAA-GML
+"Marthas Vineyard, Massachusetts",MVY*,41.325,-70.567,0.0,NOAA-GML
+Mt. Wilson Observatory,MWO,34.225,-118.059,1729.3,NOAA-GML
+Farol De Mae Luiza Lighthouse,NAT,-5.795,-35.185,50.0,NOAA-GML
+"NE Baltimore, Maryland",NEB,39.315,-76.583,44.0,NOAA-GML
+"Offshore Portsmouth, New Hampshire (Isles of Shoals)",NHA,42.95,-70.63,0.0,NOAA-GML
+Gobabeb,NMB,-23.58,15.03,456.0,NOAA-GML
+"Narragansett, Rhode Island",NRI*,41.49,-71.42,21.0,NOAA-GML
+NW Baltimore,NWB,39.344,-76.685,135.0,NOAA-GML
+"Niwot Ridge Forest, Colorado",NWF*,40.03,-105.55,3050.0,NOAA-GML
+"Niwot Ridge, Colorado",NWR,40.053,-105.586,3523.0,NOAA-GML
+Kaitorete Spit,NZL*,-43.83,172.63,3.0,NOAA-GML
+Haute Provence,OHP,43.917,5.712,650.0,NOAA-GML
+"Oglesby, Illinois",OIL*,41.28,-88.94,192.6,NOAA-GML
+"Olympic Peninsula, Washington",OPW*,48.3,-124.628,486.0,NOAA-GML
+"Oak Ridge, Tennesee",ORT*,35.96,-84.29,334.0,NOAA-GML
+Ochsenkopf,OXK,50.03,11.808,1022.0,NOAA-GML
+"Pallas-Sammaltunturi, GAW Station",PAL,67.973,24.116,565.0,NOAA-GML
+"Pico, Azores",PCO*,38.47,-28.4,2225.0,NOAA-GML
+"Poker Flat, Alaska",PFA,64.9,-148.76,210.0,NOAA-GML
+"Palmer Station, Antarctica",PSA,-64.774,-64.053,10.0,NOAA-GML
+"Point Six Mountain, Montana",PSM*,47.03,-113.98,2462.0,NOAA-GML
+"Penn State, Pennsylvania",PSU,40.72,-77.931,376.0,NOAA-GML
+"Point Arena, California",PTA*,38.955,-123.741,17.0,NOAA-GML
+Perth,PTH,-31.917,115.967,5.0,NOAA-GML
+"Raleigh, North Carolina",RAL,35.73,-78.68,124.0,NOAA-GML
+Ragged Point,RPB,13.165,-59.432,15.0,NOAA-GML
+Resolute,RSL*,74.717,-94.983,64.0,NOAA-GML
+Rarotonga,RTA,-21.25,-159.83,3.0,NOAA-GML
+Santarem,SAN*,-2.85,-54.95,78.0,NOAA-GML
+"Offshore Charleston, South Carolina",SCA,32.77,-79.55,0.0,NOAA-GML
+South China Sea (3 N),SCSN03*,3.0,105.0,15.0,NOAA-GML
+South China Sea (6 N),SCSN06*,6.0,107.0,15.0,NOAA-GML
+South China Sea (9 N),SCSN09*,9.0,109.0,15.0,NOAA-GML
+South China Sea (12 N),SCSN12*,12.0,111.0,15.0,NOAA-GML
+South China Sea (15 N),SCSN15*,15.0,113.0,15.0,NOAA-GML
+South China Sea (18 N),SCSN18*,18.0,113.5,15.0,NOAA-GML
+South China Sea (21 N),SCSN21*,21.0,114.0,15.0,NOAA-GML
+"Beech Island, South Carolina",SCT,33.406,-81.833,115.2,NOAA-GML
+Shangdianzi,SDZ*,40.65,117.117,293.0,NOAA-GML
+"Seattle, Washington",SEA,47.68,-122.25,20.0,NOAA-GML
+Seoul,SEL*,37.571,126.966,85.8,NOAA-GML
+Mahe Island,SEY,-4.682,55.532,2.0,NOAA-GML
+"Bird Island, South Georgia",SGI*,-54.0,-38.05,30.0,NOAA-GML
+"Southern Great Plains, Oklahoma",SGP,36.607,-97.489,314.0,NOAA-GML
+"Shemya Island, Alaska",SHM,52.711,174.126,23.0,NOAA-GML
+"La Jolla, California",SIO*,32.83,-117.27,14.0,NOAA-GML
+Salt Lake City,SLC,40.77,-111.97,1288.0,NOAA-GML
+Tutuila,SMO,-14.247,-170.564,42.0,NOAA-GML
+Hyytiala,SMR,61.847,24.295,181.0,NOAA-GML
+Shenandoah National Park,SNP,38.617,-78.35,1008.0,NOAA-GML
+Sierra Nevada,SNS,37.096,-3.387,2501.0,NOAA-GML
+Storm Peak Laboratory (Desert Research Institute),SPL,40.45,-106.73,3210.0,NOAA-GML
+"South Pole, Antarctica",SPO,-89.98,-24.8,2810.0,NOAA-GML
+Ocean Station Charlie,STC*,54.0,-35.0,6.0,NOAA-GML
+Ocean Station M,STM*,66.0,2.0,0.0,NOAA-GML
+"Sutro Tower, San Francisco, California",STR,37.755,-122.453,254.0,NOAA-GML
+Summit,SUM,72.596,-38.422,3209.5,NOAA-GML
+Suva,SUV,-18.0,178.0,0.0,NOAA-GML
+"Sterling, Virginia",SVA,38.98,-77.47,85.0,NOAA-GML
+"Sioux Falls, South Dakota",SXF,43.734,-96.623,473.0,NOAA-GML
+"Syowa Station, Antarctica",SYO,-69.013,39.59,14.0,NOAA-GML
+Tacolneston,TAC*,52.518,1.139,56.0,NOAA-GML
+"Tallahassee, Florida",TAL*,30.43,-84.33,53.0,NOAA-GML
+Tae-ahn Peninsula,TAP,36.738,126.133,16.0,NOAA-GML
+Table Mountain,TBL,40.125,-105.237,1689.0,NOAA-GML
+Tambopata,TBP,-12.82,-69.292,200.0,NOAA-GML
+"Offshore Corpus Christi, Texas",TGC,27.73,-96.86,0.0,NOAA-GML
+"Trinidad Head, California",THD,41.054,-124.151,107.0,NOAA-GML
+Hydrometeorological Observatory of Tiksi,TIK,71.597,128.889,19.0,NOAA-GML
+"Tallahassee, Florida",TLH*,30.38,-84.37,18.0,NOAA-GML
+"Thurmont, Maryland",TMD,39.577,-77.488,561.0,NOAA-GML
+Taiping Island,TPI,10.379,114.371,4.0,NOAA-GML
+"Tundra Lab, Niwot Ridge, Colorado",TUN,40.054,-105.589,3538.0,NOAA-GML
+University of Granada,UGR,37.164,-3.605,680.0,NOAA-GML
+Ulaanbaatar,ULB*,47.4,106.0,1350.0,NOAA-GML
+Ushuaia,USH,-54.848,-68.311,12.0,NOAA-GML
+"Wendover, Utah",UTA,39.902,-113.718,1327.0,NOAA-GML
+Ulaan Uul,UUM,44.452,111.096,1007.0,NOAA-GML
+Varrio,VAR,67.755,29.609,400.0,NOAA-GML
+"Wallops Island, Virginia",WAI,37.86,-75.51,13.0,NOAA-GML
+"West Branch, Iowa",WBI,41.725,-91.353,241.7,NOAA-GML
+"Walnut Grove, California",WGC,38.264,-121.49,2.0,NOAA-GML
+Whistler,WHI,50.059,-122.958,2182.0,NOAA-GML
+"Weizmann Institute of Science at the Arava Institute, Ketura",WIS,29.965,35.06,151.0,NOAA-GML
+"Moody, Texas",WKT,31.315,-97.327,251.0,NOAA-GML
+Mt. Waliguan,WLG,36.288,100.896,3810.0,NOAA-GML
+Western Pacific Cruise (0 N),WPCN00*,0.0,151.1,0.0,NOAA-GML
+Western Pacific Cruise (5 N),WPCN05*,5.0,149.1,0.0,NOAA-GML
+Western Pacific Cruise (10 N),WPCN10*,10.0,148.0,0.0,NOAA-GML
+Western Pacific Cruise (15 N),WPCN15*,15.0,145.0,0.0,NOAA-GML
+Western Pacific Cruise (20 N),WPCN20*,20.0,142.0,0.0,NOAA-GML
+Western Pacific Cruise (25 N),WPCN25*,25.0,140.0,0.0,NOAA-GML
+Western Pacific Cruise (30 N),WPCN30*,30.0,136.8,0.0,NOAA-GML
+Western Pacific Cruise (5 S),WPCS05*,-5.0,153.7,0.0,NOAA-GML
+Western Pacific Cruise (10 S),WPCS10*,-10.0,156.8,0.0,NOAA-GML
+Western Pacific Cruise (15 S),WPCS15*,-15.0,159.3,0.0,NOAA-GML
+Western Pacific Cruise (20 S),WPCS20*,-20.0,161.1,0.0,NOAA-GML
+Western Pacific Cruise (25 S),WPCS25*,-25.0,165.5,0.0,NOAA-GML
+Western Pacific Cruise (30 S),WPCS30*,-30.0,168.0,0.0,NOAA-GML
+"Sable Island, Nova Scotia",WSA*,43.932,-60.009,5.0,NOAA-GML
+"Weaverville, California",WVR,40.731,-122.942,613.0,NOAA-GML
+"Ny-Alesund, Svalbard",ZEP,78.907,11.888,474.0,NOAA-GML
