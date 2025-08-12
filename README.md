@@ -4,25 +4,37 @@ This repository provides a **modular Python framework** for generating multi-sta
 
 The code is designed for easy extension to new variables, different stations, and other plot types.
 
+See the [group_python](https://github.com/Centre-for-Atmospheric-Science-Cam-Chem/group_python) repo for common tasks. It is also shared and open to contributions.
+
+## Table of contents
+
+
+
 ---
  
-### **Project Structure**
+### Project structure
 
 ```
 
-ukca_model_eval/
+ukesm-eval-python/
+│ 
 ├── utils/
 │   ├── __init__.py
 │   ├── data_io.py         # Model/obs file loading functions
 │   ├── processing.py      # Data selection, filtering, grouping, stats
 │   ├── plot_utils.py      # Plotting style and utility functions
 │   └── units.py           # Unit conversion functions
+│ 
 ├── plot_scripts/
 │   ├── plot_CO_station_seasonal.py    # Example driver script for CO
 │   └── ...                            # Other plotting recipes
+│ 
 ├── config.yaml             # Central config for paths, variable names, units
+│ 
 ├── data/                   # Model/obs data files (not tracked in git)
+│ 
 ├── output/                 # Figures and plots
+│ 
 └── README.md
 
 ```
